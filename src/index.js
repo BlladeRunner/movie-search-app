@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import reportWebVitals from './reportWebVitals';
+import App from "./App"
 
 class Main extends React.Component {
   render() {
     return (
-      <h1>Hello world updated!</h1>
+      <div className="container">
+        <h1 className="title">Movie Search House</h1>
+      </div>
     );
   }
 }
