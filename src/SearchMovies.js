@@ -11,7 +11,7 @@ export default function SearchMovies() {
     const searchMovies = async (e) => {
         e.preventDefault();
         
-        const url = `https://api.themoviedb.org/3/movie/550?api_key=bea0e997a9ff807e35f4e2eaffdedaa7&language=en-US&query=${query}&page=1&include_adult=false`;
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=bea0e997a9ff807e35f4e2eaffdedaa7&language=en-US&query=${query}&page=1&include_adult=false`;
         
         try {
             const res = await fetch(url);
@@ -24,8 +24,8 @@ export default function SearchMovies() {
 
     return (
         <div>
-            <form className="form">
-                <label className="label" htmlFor="query">Movie Name</label>
+            <form className="form" onSubmit={searchMovies}>
+                <label className="label" htmlFor="query"></label>
                     <input 
                         className="input"
                         type="text" 
@@ -38,7 +38,7 @@ export default function SearchMovies() {
             </form>
             <div className="card-list">
                 {movies.filter(movie => movie.poster_path).map(movie => (
-                    <MovieCard movie={movie} />
+                    <MovieCard movie={movie} key={movie.id} />
                 ))}
             </div>
         </div>    

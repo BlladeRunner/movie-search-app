@@ -9,12 +9,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(244,244,244);
-  color: #333;
+  background-color: #A0A0A0;
+  color: #e93d3d;
 }
 
 p {
   font-size: 1.6rem;
+  color: lightgoldenrodyellow;
+  font-size: 20px;
 }
 
 small {
@@ -87,7 +89,7 @@ small {
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
   margin-bottom: 2rem;
-  background-color: white;
+  background-color: #333;
 }
 
 .card--title {
@@ -97,5 +99,6 @@ small {
 
 .card--image {
   margin: 0 auto;
-  display: block
+  display: block;
+  width: 250px;
 }
